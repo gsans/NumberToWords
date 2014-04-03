@@ -41,15 +41,6 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
-.highlight {
-    background-color: #F7F7F9;
-    border: 1px solid #E1E1E8;
-    border-radius: 4px;
-    margin-bottom: 14px;
-    padding: 9px 14px;
-    margin-top: 25px;
-}
-
 .btn {
     margin-top: 10px;
 }

@@ -11,8 +11,9 @@ namespace NumberToWords.MVCApp.Controllers
 
     public class NumberToWordsController : ApiController
     {
-        [Route("api/numbertowords/{number:int}")]
         // GET api/numbertowords/5
+
+        [Route("api/numbertowords/{number:int}")]        
         public string Get(int number)
         {
             NumberToWords lib = new NumberToWords();
