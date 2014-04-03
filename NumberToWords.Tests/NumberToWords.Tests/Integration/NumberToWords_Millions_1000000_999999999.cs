@@ -17,7 +17,16 @@ namespace NumberToWords.Tests.Integration
         [TestCase(99999999, Result = "ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
         [TestCase(199999999, Result = "one hundred and ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
         [TestCase(999999999, Result = "nine hundred and ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
-        public string NumberToWords_Thousands_1000000_To_999999999(int number)
+        public string NumberToWords_Millions_1000000_To_999999999(int number)
+        {
+            var library = new NumberToWords();
+            return library.Read(number);
+        }
+
+        [TestCase(Int32.MinValue, ExpectedException = typeof(ArgumentException))]
+        [TestCase(-2147483647, Result = "minus two thousand one hundred and forty seven million four hundred and eighty three thousand six hundred and forty seven")]
+        [TestCase(Int32.MaxValue, Result = "two thousand one hundred and forty seven million four hundred and eighty three thousand six hundred and forty seven")]
+        public string NumberToWords_Millions_MinAndMaxValues(int number)
         {
             var library = new NumberToWords();
             return library.Read(number);

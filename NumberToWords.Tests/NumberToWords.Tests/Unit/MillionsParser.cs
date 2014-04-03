@@ -47,5 +47,14 @@ namespace NumberToWords.Tests.Unit
             parser.Parse(number, numberInWords);
             return numberInWords.ToString();
         }
+        
+        [TestCase(Int32.MaxValue, Result = "two thousand one hundred and forty seven million four hundred and eighty three thousand six hundred and forty seven")]
+        public string MillionsParser_MaxValue(int number)
+        {
+            StringBuilder numberInWords = new StringBuilder();
+            MillionsParser parser = new MillionsParser();
+            parser.Parse(number, numberInWords);
+            return numberInWords.ToString();
+        }
     }
 }

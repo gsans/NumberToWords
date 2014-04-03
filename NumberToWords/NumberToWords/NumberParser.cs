@@ -20,9 +20,13 @@ namespace NumberToWords
         {            
             if (number < 0)
             {
-                Successor.Parse(Math.Abs(number), numberInWords);
+                int positiveNumber;
+                if (number == Int32.MinValue)
+                    throw new ArgumentException(String.Format("Minimum value is: {0}", number - 1));
+                else
+                    positiveNumber = Math.Abs(number);
                 numberInWords.AppendFormat("{0} ", MINUS);
-                numberInWords.Append(numberInWords);
+                Successor.Parse(positiveNumber, numberInWords);
                 return;
             }
             Successor.Parse(number, numberInWords);

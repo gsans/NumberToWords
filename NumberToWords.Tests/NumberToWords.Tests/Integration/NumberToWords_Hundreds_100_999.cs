@@ -23,7 +23,7 @@ namespace NumberToWords.Tests.Integration
         [TestCase(920, Result = "nine hundred and twenty")]
         [TestCase(921, Result = "nine hundred and twenty one")]
         [TestCase(999, Result = "nine hundred and ninety nine")]
-        public string NumberToWords_Tens_TenToNineteen(int number)
+        public string NumberToWords_Hundreds_TenToNineteen(int number)
         {
             var library = new NumberToWords();
             return library.Read(number);
