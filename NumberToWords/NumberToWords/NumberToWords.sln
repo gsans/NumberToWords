@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.MVC", "..\..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.ConsoleApp", "..\..\NumberToWords.ConsoleApp\NumberToWords.ConsoleApp\NumberToWords.ConsoleApp.csproj", "{4A127D74-86BF-49DA-AD00-1CE24697E980}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.MVCApp", "..\..\NumberToWords.MVCApp\NumberToWords.MVCApp\NumberToWords.MVCApp.csproj", "{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,30 @@
 ﻿@{
     ViewBag.Title = "Number To Words";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<h2>Number to Words</h2>
+
+Enter a number <input type="text" value="0" id="id" />
+<button data-bind="click: $root.readNumber">Read</button>
+
+<h2>Response</h2>
+<span id="response"></span>
+
+@section scripts
+{
+@Scripts.Render("~/Scripts/knockout-3.1.0.js")
+@Scripts.Render("~/Scripts/moment.min.js")
+
+<script>
+    function AppViewModel() {
+        var self = this;
+        self.readNumber = function () {
+            var number = parseInt($('#id').val());
+            $.get("/api/numbertowords/"+number, null, function () {
+                $('#response').text(response);
+            });
+        };
+    }
+    ko.applyBindings(new AppViewModel());
+</script>
+}

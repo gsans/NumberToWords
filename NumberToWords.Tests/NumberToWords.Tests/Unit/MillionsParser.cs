@@ -36,5 +36,15 @@ namespace NumberToWords.Tests.Unit
             parser.Parse(number, ref output);
             return output;
         }
+
+        [TestCase(99999999, Result = "ninety-nine million nine hundred and ninety-nine thousand nine hundred and ninety-nine")]
+        [TestCase(999999999, Result = "nine hundred and ninety-nine million nine hundred and ninety-nine thousand nine hundred and ninety-nine")]
+        public string MillionsParser_HundredsParserPlusThousandsParser(int number)
+        {
+            string output = String.Empty;
+            MillionsParser parser = new MillionsParser();
+            parser.Parse(number, ref output);
+            return output;
+        }
     }
 }
