@@ -24,7 +24,7 @@ namespace NumberToWords
             int tail = number % PARSER_BASE;
 
             // Appending to a larger number Eg: 1001
-            if (!String.IsNullOrEmpty(numberInWords.ToString()))
+            if (!String.IsNullOrEmpty(numberInWords.ToString()) && numberInWords.ToString()!="minus ")
                 numberInWords.AppendFormat("{0} ", AND);
 
             if (number >= 20)
