@@ -11,10 +11,14 @@ namespace NumberToWords
     {
         private NumberParser _parser;
 
+        public NumberToWords()
+        {
+            _parser = new NumberParser();
+        }
+
         public string Read(int number)
         {
-            string output = string.Empty;
-            _parser = new NumberParser();
+            string output = string.Empty;            
             _parser.Parse(number, ref output);
             return output;
         }

@@ -15,15 +15,14 @@ namespace NumberToWords
         }
 
         public override void Parse(int number, ref string output)
-        {
-            MillionsParser p = new MillionsParser();
+        {            
             if (number < 0)
             {
-                p.Parse(Math.Abs(number), ref output);
+                Successor.Parse(Math.Abs(number), ref output);
                 output = "minus " + output;
                 return;
-            }            
-            p.Parse(number, ref output);
+            }
+            Successor.Parse(number, ref output);
         }
     }
 }
