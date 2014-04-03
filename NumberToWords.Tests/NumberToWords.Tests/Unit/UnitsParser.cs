@@ -2,6 +2,7 @@
 using NUnit;
 using NUnit.Framework;
 using NumberToWords;
+using System.Text;
 
 namespace NumberToWords.Tests.Unit
 {
@@ -20,10 +21,10 @@ namespace NumberToWords.Tests.Unit
         [TestCase(9, Result = "nine")]
         public string UnitsParser_ZeroToNine(int number)
         {
-            string output = String.Empty;
+            StringBuilder numberInWords = new StringBuilder();
             UnitsParser parser = new UnitsParser();
-            parser.Parse(number, ref output);
-            return output;
+            parser.Parse(number, numberInWords);
+            return numberInWords.ToString();
         }
     }
 }

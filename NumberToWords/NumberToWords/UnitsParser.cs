@@ -8,14 +8,11 @@ namespace NumberToWords
 {
     public class UnitsParser : Parser
     {
-        private readonly string[] _units =
-        {
-            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
-        };
+        private readonly string[] _units = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-        public override void Parse(int number, ref string output)
+        public override void Parse(int number, StringBuilder numberInWords)
         {
-            output += _units[number];
+            numberInWords.Append(_units[number]);
         }
     }
 }

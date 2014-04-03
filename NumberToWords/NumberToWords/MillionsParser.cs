@@ -15,23 +15,23 @@ namespace NumberToWords
         {
             Successor = new ThousandsParser();
         }
-        public override void Parse(int number, ref string output)
+        public override void Parse(int number, StringBuilder numberInWords)
         {
-            int division = number / PARSER_BASE;
-            int reminder = number % PARSER_BASE;
+            int head = number / PARSER_BASE;
+            int tail = number % PARSER_BASE;
 
-            if (division > 0)
+            if (head > 0)
             {
                 NumberParser p = new NumberParser();
-                string num = string.Empty;
-                p.Parse(division, ref num);
-                output += num + " " + MILLION;
-                if (reminder == 0)
-                    return;
+                StringBuilder headNumberInWords = new StringBuilder();
+                p.Parse(head, headNumberInWords);
+                numberInWords.AppendFormat("{0} {1}", headNumberInWords.ToString(), MILLION);
+                if (tail > 0)
+                    numberInWords.Append(" ");
                 else
-                    output += " ";
-            }
-            Successor.Parse(reminder, ref output);
+                    return;
+            }            
+            Successor.Parse(tail, numberInWords);
         }
     }
 }

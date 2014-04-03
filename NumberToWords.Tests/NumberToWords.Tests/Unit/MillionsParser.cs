@@ -2,6 +2,7 @@
 using NUnit;
 using NUnit.Framework;
 using NumberToWords;
+using System.Text;
 
 namespace NumberToWords.Tests.Unit
 {
@@ -14,10 +15,10 @@ namespace NumberToWords.Tests.Unit
         [TestCase(9000000, Result = "nine million")]
         public string MillionsParser_UnitsPlusMillions(int number)
         {
-            string output = String.Empty;
+            StringBuilder numberInWords = new StringBuilder();
             MillionsParser parser = new MillionsParser();
-            parser.Parse(number, ref output);
-            return output;
+            parser.Parse(number, numberInWords);
+            return numberInWords.ToString();
         }
 
         [TestCase(1000001, Result = "one million and one")]
@@ -31,20 +32,20 @@ namespace NumberToWords.Tests.Unit
         [TestCase(9999999, Result = "nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
         public string MillionsParser_UnitsPlusThousandsParser(int number)
         {
-            string output = String.Empty;
+            StringBuilder numberInWords = new StringBuilder();
             MillionsParser parser = new MillionsParser();
-            parser.Parse(number, ref output);
-            return output;
+            parser.Parse(number, numberInWords);
+            return numberInWords.ToString();
         }
 
         [TestCase(99999999, Result = "ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
         [TestCase(999999999, Result = "nine hundred and ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine")]
         public string MillionsParser_HundredsParserPlusThousandsParser(int number)
         {
-            string output = String.Empty;
+            StringBuilder numberInWords = new StringBuilder();
             MillionsParser parser = new MillionsParser();
-            parser.Parse(number, ref output);
-            return output;
+            parser.Parse(number, numberInWords);
+            return numberInWords.ToString();
         }
     }
 }

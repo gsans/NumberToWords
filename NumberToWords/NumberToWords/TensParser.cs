@@ -9,45 +9,40 @@ namespace NumberToWords
     public class TensParser : Parser
     {
         private const int PARSER_BASE = 10;
+        private const string AND = "and";
 
-        private readonly string[] _units =
-        {
-            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
-        };
-        private readonly string[] _tens =
-        {
-            "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
-        };
+        private readonly string[] _units = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+        private readonly string[] _tens = { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
         public TensParser()
         {
             Successor = new UnitsParser();
         }
-        public override void Parse(int number, ref string output)
+        public override void Parse(int number, StringBuilder numberInWords)
         {
-            int division = number / PARSER_BASE;
-            int reminder = number % PARSER_BASE;
+            int head = number / PARSER_BASE;
+            int tail = number % PARSER_BASE;
 
-            if (!String.IsNullOrEmpty(output))
-                output += "and ";
+            if (!String.IsNullOrEmpty(numberInWords.ToString()))
+                numberInWords.AppendFormat("{0} ", AND);
 
             if (number >= 20)
             {
-                output += _tens[division];
-                if (reminder > 0)
+                numberInWords.AppendFormat("{0}", _tens[head]);
+                if (tail > 0)
                 {
-                    string units = string.Empty;
-                    Successor.Parse(reminder, ref units);
-                    output += " " + units;
+                    StringBuilder headNumberInWords = new StringBuilder();
+                    Successor.Parse(tail, headNumberInWords);
+                    numberInWords.AppendFormat(" {0}", headNumberInWords.ToString());
                 }
                 return;
             }
             if (number>=10)
             {
-                output += _units[number];
+                numberInWords.Append(_units[number]);
                 return;
             }
-            Successor.Parse(reminder, ref output);                     
+            Successor.Parse(tail, numberInWords);                     
         }
     }
 }

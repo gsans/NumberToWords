@@ -9,6 +9,6 @@ namespace NumberToWords
     public abstract class Parser
     {        
         protected Parser Successor { get; set; }
-        public abstract void Parse(int number, ref string output);
+        public abstract void Parse(int number, StringBuilder numberInWords);
     }
 }

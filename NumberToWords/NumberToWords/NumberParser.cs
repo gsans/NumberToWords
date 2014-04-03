@@ -9,20 +9,23 @@ namespace NumberToWords
 {
     public class NumberParser : Parser
     {
+        private const string MINUS = "minus";
+
         public NumberParser() 
         {
             Successor = new MillionsParser();
         }
 
-        public override void Parse(int number, ref string output)
+        public override void Parse(int number, StringBuilder numberInWords)
         {            
             if (number < 0)
             {
-                Successor.Parse(Math.Abs(number), ref output);
-                output = "minus " + output;
+                Successor.Parse(Math.Abs(number), numberInWords);
+                numberInWords.AppendFormat("{0} ", MINUS);
+                numberInWords.Append(numberInWords);
                 return;
             }
-            Successor.Parse(number, ref output);
+            Successor.Parse(number, numberInWords);
         }
     }
 }
