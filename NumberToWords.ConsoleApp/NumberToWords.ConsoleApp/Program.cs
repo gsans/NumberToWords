@@ -15,15 +15,15 @@ namespace NumberToWords.ConsoleApp
 
             while (true)
             {
-                Console.WriteLine("Enter a number to be converted to words [q:quit] : ");
+                Console.WriteLine("Enter a number to be converted to words (enter <q> to Quit): ");
                 input = Console.ReadLine();
                 if (input == "q") break;
 
-                NumberToWords lib = new NumberToWords();
+                var library = new NumberToWords();
                 if (Int32.TryParse(input, out number))
-                    Console.WriteLine(lib.Read(number));
+                    Console.WriteLine(library.Read(number));
                 else
-                    Console.WriteLine("Input must be a number");                
+                    Console.WriteLine("Input must be a number.");                
             }
         }
     }
