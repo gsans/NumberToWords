@@ -23,9 +23,9 @@ namespace NumberToWords.Tests.Unit
         [TestCase(1001, Result = "one thousand and one")]
         [TestCase(1011, Result = "one thousand and eleven")]
         [TestCase(1020, Result = "one thousand and twenty")]
-        [TestCase(1021, Result = "one thousand and twenty-one")]
+        [TestCase(1021, Result = "one thousand and twenty one")]
         [TestCase(1100, Result = "one thousand one hundred")]
-        [TestCase(9999, Result = "nine thousand nine hundred and ninety-nine")]
+        [TestCase(9999, Result = "nine thousand nine hundred and ninety nine")]
         public string ThousandsParser_UnitsPlusHundredsParser(int number)
         {
             string output = String.Empty;

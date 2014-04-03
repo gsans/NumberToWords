@@ -38,7 +38,7 @@ namespace NumberToWords
                 {
                     string units = string.Empty;
                     Successor.Parse(reminder, ref units);
-                    output += "-" + units;
+                    output += " " + units;
                 }
                 return;
             }

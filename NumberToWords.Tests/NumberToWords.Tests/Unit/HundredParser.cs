@@ -35,7 +35,7 @@ namespace NumberToWords.Tests.Unit
 
         [TestCase(120, Result = "one hundred and twenty")]
         [TestCase(130, Result = "one hundred and thirty")]
-        [TestCase(199, Result = "one hundred and ninety-nine")]
+        [TestCase(199, Result = "one hundred and ninety nine")]
         public string HundredParser_UnitsPlusTensHundred(int number)
         {
             string output = String.Empty;
@@ -44,9 +44,9 @@ namespace NumberToWords.Tests.Unit
             return output;
         }
 
-        [TestCase(121, Result = "one hundred and twenty-one")]
-        [TestCase(131, Result = "one hundred and thirty-one")]
-        [TestCase(999, Result = "nine hundred and ninety-nine")]
+        [TestCase(121, Result = "one hundred and twenty one")]
+        [TestCase(131, Result = "one hundred and thirty one")]
+        [TestCase(999, Result = "nine hundred and ninety nine")]
 
         public string HundredParser_UnitsPlusTensPlusUnitsHundred(int number)
         {

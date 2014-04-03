@@ -39,25 +39,25 @@ namespace NumberToWords.Tests.Integration
             return library.Read(number);
         }
 
-        [TestCase(21, Result = "twenty-one")]
-        [TestCase(22, Result = "twenty-two")]
-        [TestCase(23, Result = "twenty-three")]
-        [TestCase(24, Result = "twenty-four")]
-        [TestCase(25, Result = "twenty-five")]
-        [TestCase(26, Result = "twenty-six")]
-        [TestCase(27, Result = "twenty-seven")]
-        [TestCase(28, Result = "twenty-eight")]
-        [TestCase(29, Result = "twenty-nine")]
+        [TestCase(21, Result = "twenty one")]
+        [TestCase(22, Result = "twenty two")]
+        [TestCase(23, Result = "twenty three")]
+        [TestCase(24, Result = "twenty four")]
+        [TestCase(25, Result = "twenty five")]
+        [TestCase(26, Result = "twenty six")]
+        [TestCase(27, Result = "twenty seven")]
+        [TestCase(28, Result = "twenty eight")]
+        [TestCase(29, Result = "twenty nine")]
 
-        [TestCase(91, Result = "ninety-one")]
-        [TestCase(92, Result = "ninety-two")]
-        [TestCase(93, Result = "ninety-three")]
-        [TestCase(94, Result = "ninety-four")]
-        [TestCase(95, Result = "ninety-five")]
-        [TestCase(96, Result = "ninety-six")]
-        [TestCase(97, Result = "ninety-seven")]
-        [TestCase(98, Result = "ninety-eight")]
-        [TestCase(99, Result = "ninety-nine")]
+        [TestCase(91, Result = "ninety one")]
+        [TestCase(92, Result = "ninety two")]
+        [TestCase(93, Result = "ninety three")]
+        [TestCase(94, Result = "ninety four")]
+        [TestCase(95, Result = "ninety five")]
+        [TestCase(96, Result = "ninety six")]
+        [TestCase(97, Result = "ninety seven")]
+        [TestCase(98, Result = "ninety eight")]
+        [TestCase(99, Result = "ninety nine")]
         public string NumberToWords_Tens_TwentyToNinetyNine(int number)
         {
             var library = new NumberToWords();

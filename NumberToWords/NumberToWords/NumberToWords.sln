@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords", "NumberToWo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.Tests", "..\..\NumberToWords.Tests\NumberToWords.Tests\NumberToWords.Tests.csproj", "{221B3388-E5EF-4C1E-A39D-20EBC24D4AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.MVC", "..\..\NumberToWords.MVC\NumberToWords.MVC\NumberToWords.MVC.csproj", "{EDCCFF7C-46BE-485D-9B04-C3CCA378FD37}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.ConsoleApp", "..\..\NumberToWords.ConsoleApp\NumberToWords.ConsoleApp\NumberToWords.ConsoleApp.csproj", "{4A127D74-86BF-49DA-AD00-1CE24697E980}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWords.MVCApp", "..\..\NumberToWords.MVCApp\NumberToWords.MVCApp\NumberToWords.MVCApp.csproj", "{540AB57F-C005-4DBD-9AB5-3B5FAC523B98}"
@@ -27,10 +25,6 @@ Global
 		{221B3388-E5EF-4C1E-A39D-20EBC24D4AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{221B3388-E5EF-4C1E-A39D-20EBC24D4AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{221B3388-E5EF-4C1E-A39D-20EBC24D4AB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDCCFF7C-46BE-485D-9B04-C3CCA378FD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDCCFF7C-46BE-485D-9B04-C3CCA378FD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDCCFF7C-46BE-485D-9B04-C3CCA378FD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDCCFF7C-46BE-485D-9B04-C3CCA378FD37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A127D74-86BF-49DA-AD00-1CE24697E980}.Release|Any CPU.ActiveCfg = Release|Any CPU
