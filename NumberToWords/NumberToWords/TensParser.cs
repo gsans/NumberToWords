@@ -23,6 +23,7 @@ namespace NumberToWords
             int head = number / PARSER_BASE;
             int tail = number % PARSER_BASE;
 
+            // Appending to a larger number Eg: 1001
             if (!String.IsNullOrEmpty(numberInWords.ToString()))
                 numberInWords.AppendFormat("{0} ", AND);
 
@@ -31,9 +32,9 @@ namespace NumberToWords
                 numberInWords.AppendFormat("{0}", _tens[head]);
                 if (tail > 0)
                 {
-                    StringBuilder headNumberInWords = new StringBuilder();
-                    Successor.Parse(tail, headNumberInWords);
-                    numberInWords.AppendFormat(" {0}", headNumberInWords.ToString());
+                    StringBuilder tailNumberInWords = new StringBuilder();
+                    Successor.Parse(tail, tailNumberInWords);
+                    numberInWords.AppendFormat(" {0}", tailNumberInWords.ToString());
                 }
                 return;
             }
