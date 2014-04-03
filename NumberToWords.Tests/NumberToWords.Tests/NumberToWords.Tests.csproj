@@ -50,6 +50,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Integration\NumberToWords_Millions_1000000_999999999.cs" />
     <Compile Include="Integration\NumberToWords_Thousands_1000_999999.cs" />
     <Compile Include="Integration\NumberToWords_Hundreds_100_999.cs" />
     <Compile Include="Integration\NumberToWords_Tens_10_99.cs" />
